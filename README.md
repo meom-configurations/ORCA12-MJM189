@@ -1,10 +1,10 @@
-# ORCA12.L46-MJM189
+# ORCA12.L46-MJM189  (WIP ... )
 ORCA12.L46-MJM189 configuration performed at DRAKKAR/MEOM
 
 This repository hold the code, and configuration files usefull for running this configuration.
 
 ## REFERENCE CODE : 
- This configuration is based on the NEMO configuration 3.5_beta. The exact revision number for the reference is not known, but the corresponding code can be found in the NEMO directory of this repository.  It is used together with the XIOS server at rev. 703 of the XIOS branch/xios-1.0. Code can be downloaded from the IPSL forge using the following statements :
+ This configuration is based on the NEMO configuration 3.5_beta. The exact revision number for the reference is not known, (likely revision 4023 of IPSL nemo forge),  but the corresponding code can be found in the NEMO directory of this repository.  It is used together with the XIOS server at rev. 703 of the XIOS branch/xios-1.0. Code can be downloaded from the IPSL forge using the following statements :
 
 ### NEMO
     See the code in NEMO directory of this repository
@@ -14,9 +14,7 @@ This repository hold the code, and configuration files usefull for running this 
  
 ## BRIEF DESCRIPTION:
 ### Overview
-   This global configuration  uses the ORCA12 grid, with the standard DRAKKAR 46 levels. 
-   
-   This simulation was performed in the frame of the 2016 *grands defis* on CINES/OCCIGEN2 super computer. The project was entitled **SINGOUT** for SImulation Nouvelle Generation 
+   This global configuration  uses the ORCA12 grid, with the standard DRAKKAR 46 levels.  This run was performed as the 2014 modelling effort for MEOM. In this run, we use last revision of NEMO + corrections in the EEN advection scheme regarding the Hollingsworth instability. 
    
 ###  Parameterizations:
  1. use non linear free surface (VVL)
@@ -52,7 +50,9 @@ This repository hold the code, and configuration files usefull for running this 
 ### Run time files:
    Most of the run time files are indicated in the namelist files, except for:
    
-   * bathymetry : ```EORCA12_bathymetry_v2.5.nc```
-   * coordinates : ```EORCA12_coordinates.nc```
-   * bottom friction : ```EORCA12_bfr2d_UKmod.nc ```
+   * bathymetry : ```bathymetry_ORCA12_V3.3.nc```
+   * coordinates : ```coordinates_ORCA_R12_lbclnk_no_z.nc ```
+   * bottom friction : ```orca12_bfr_coef_MAL101.nc ```
+   * Ice initialisation : ```ORCA12.L46-MAL95_y1998-2007m01_icemod_initMAL101.nc ```
+   * AABW damping mask : ``` ORCA12.L46_dmp_mask.nc ```
 
